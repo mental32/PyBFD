@@ -3,28 +3,6 @@
 Small async API wrapper for the [Bots for Discord](https://botsfordiscord.com/) API
 
 ## Examples
-
-You dont need discord.py to use PyBFD
-
-```py
-import sys
-import bfd
-
-client = bfd.Client('YOUR API TOKEN')
-
-async def main():
-    profile = client.get_bot(int(sys.argv[1]))
-
-    print(profile)
-    print('name:', profile.name)
-    print('prefixes:', profile.prefix)
-    print('server count:', profile.guild_count)
-    print('invite link', profile.invite)
-    print('owner:', profile.owner)
-
-client.loop.run_until_complete(main())
-```
-
 Embed PyBFD into your bot with commands.
 
 ```py
@@ -80,3 +58,25 @@ class BFDapi:
 def setup(bot):
     bot.add_cog(BFDapi(bot))
 ```
+
+You dont need discord.py to use PyBFD
+
+```py
+import sys
+import bfd
+
+client = bfd.Client('YOUR API TOKEN')
+
+async def main():
+    profile = client.get_bot(int(sys.argv[1]))
+
+    print(profile)
+    print('name:', profile.name)
+    print('prefixes:', profile.prefix)
+    print('server count:', profile.guild_count)
+    print('invite link', profile.invite)
+    print('owner:', profile.owner)
+
+client.loop.run_until_complete(main())
+```
+
