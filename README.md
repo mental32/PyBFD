@@ -69,7 +69,7 @@ import bfd
 client = bfd.Client('YOUR API TOKEN')
 
 async def main():
-    profile = client.get_bot(int(sys.argv[1]))
+    profile = await client.get_bot(int(sys.argv[1]))
 
     print(profile)
     print('name:', profile.name)
