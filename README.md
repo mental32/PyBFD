@@ -50,6 +50,7 @@ class BFDapi:
 
     async def update_guild_count(self):
         await self.bot.wait_until_ready()
+        me = await self.client.get_bot(self.bot.user.id)
 
         while not self.bot.is_closed():
             await me.update(server_count=len(self.bot.guilds))
