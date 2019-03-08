@@ -1,5 +1,7 @@
 # PyBFD
 
+> Not actively maintained
+
 Small async API wrapper for the [Bots for Discord](https://botsfordiscord.com/) API
 
 ## Examples
